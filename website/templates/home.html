@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock%}
+
+{% block content%}
+<body background="{{ url_for('static', filename='children.png') }}">
+<!-- <img src="{{url_for('static', filename='children.jpg')}}" align="middle" /> -->
+
+
+<div class="container" style="background-color: #6f5acd; width: 350px; padding: 1.25vw 1.25vw 2vw 1.75vw; margin-top: 10vw; margin-left: 9vw; border: solid #6f5acd 3px;">
+    <h1 style="color: #b7a7f7; font-family: 'Raleway', sans-serif; font-weight: 600;"><span>Jamaica</span><br><span style="color: #de8ed8;"><i> Youth </i></span><span>Vision</span></h1>
+    <p style="color: white; font-family: 'Barlow', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Pulvinar elementum integer enim neque volutpat ac tincidunt. In arcu cursus euismod quis viverra nibh cras pulvinar mattis. 
+        Sagittis orci a scelerisque purus semper eget.
+    </p>
+    <button style="margin-right: 10px; width:150px; height: 35px; border-radius: 2px; background-color: #de8ed8;"><a href="/shelters" style="text-decoration: none; color: white;">HELP OUT</a></button>
+</div>
+{% endblock %}

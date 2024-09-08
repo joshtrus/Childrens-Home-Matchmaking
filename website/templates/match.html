@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Matching Form{% endblock%}
+
+{% block content%}
+<body id="match-body">
+    <div class="main">
+        <div class="form_header">
+            <div class="center">
+                <h1 class="form_title">Children's Home Matchmaker!</h1>
+            </div>
+            <div class="center">
+                <p class="form_details">Enter your details so that we can find the children's home best fit for you!</p>
+            </div>
+        </div>
+        <div class="form_holder">
+            <form method="POST">
+                <div class="form">
+                    <div class="form_item">
+                        <label for="parish" class="matcher-label">Where are you located?</label>
+                        <select name="parish" id="parish" class="input_box">
+                            <option value="none" selected disabled hidden>Select An Option</option>
+                            <option value="kingston">Kingston</option>
+                            <option value="st_andrew">St. Andrew</option>
+                            <option value="st_catherine">St. Catherine</option>
+                            <option value="clarendon">Clarendon</option>
+                            <option value="manchester">Manchester</option>
+                            <option value="st_elizabeth">St. Elizabeth</option>
+                            <option value="westmoreland">Westmoreland</option>
+                            <option value="hanover">Hanover</option>
+                            <option value="st_james">St. James</option>
+                            <option value="trelawny">Trelawny</option>
+                            <option value="st_ann">St. Ann</option>
+                            <option value="st_mary">St. Mary</option>
+                            <option value="portland">Portland</option>
+                            <option value="st_thomas">St. Thomas</option>
+                        </select>
+                    </div>
+                    <div class="form_item">
+                        <label for="budget" class="matcher-label">What is your budget?</label>
+                        <input type="number" id="budget" name="budget" step="1000" min="0" placeholder="50000" oninput="this.value = 
+                        !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" class="input_box">
+                    </div>
+                    <div class="form_item">
+                        <label for="party" class="matcher-label">How large is your group?</label>
+                        <input type="number" id="party" name="party" step="1" min="1" placeholder="5" class="input_box">
+                    </div>
+                    <div class="form_item">
+                        <label for="specialization" class="matcher-label">What type of home are you looking for?</label>
+                        <select name="specialization" id="specialization" class="input_box">
+                            <option value="none" selected disabled hidden>Select An Option</option>
+                            <option value="general">General Home (no specialization)</option>
+                            <option value="all_girls">All Girls</option>
+                            <option value="all_boys">All Boys</option>
+                            <option value="disabilities">Disabilities</option>
+                        </select>
+                    </div>
+                    <div class="form_item button-holder">
+                        <div class="match-button">
+                            <input type="submit" value="Find Match!" class="match-button">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

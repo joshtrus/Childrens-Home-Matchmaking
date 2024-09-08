@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Children's Homes{% endblock%}
+
+{% block content%}
+<body background="{{ url_for('static', filename='gallery_bg.png') }}"></body>
+
+
+<div class="container" style="background-color: #6f5acd; width: 225px; padding: 1.25vw 1.25vw 2vw 1.25vw; margin-top: 5.5vw; margin-left: 3vw; border: solid #6f5acd 3px;">
+    <h1 style="color: #b7a7f7; font-family: 'Raleway', sans-serif; font-weight: 600;">Get <span>Matched</span> with a Home</h1>
+    <p style="color: white; font-family: 'Barlow', sans-serif;">Whether it's 500JMD or 50,000JMD, every donation matters. Try out this survey we have created to find a home that matches not just your financial circumstances, but social, locational, and so much more!
+    </p>
+    <button style="margin-top: 10px; background-color: #de8ed8; border: none; padding: 5px;"><a href="/matchmaking-survey" style="text-decoration: none; color: white;">Start Now!</a></button>
+</div>
+
+<div id="wrapper" class="container" style="background-color: white; width: 1000px; margin-left: 22vw; margin-top: -40vw;">
+            {% for shelter in shelters %}
+            <div class="container" style="background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; border-radius: 3px; width: 300px; margin: 11px; float: left;">
+                <ul class="list-group list-group-flush" id="shelters">
+                    <li class="list-group-item">
+                        <img src="{{ url_for('static', filename='example.jpg') }}" style="max-width: 100%; max-height: 100%;">
+                    </li>
+                    <li class="list-group-item">
+                        <h4>{{ shelter.home_name }}</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <p>{{ shelter.home_description[0:100] }}...</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p><a href="/learn-more/{{shelter.home_name}}">Learn More -></a></p>
+                    </li>
+                </ul>
+            </div>
+            {% endfor %}
+</div>
+{% endblock %}

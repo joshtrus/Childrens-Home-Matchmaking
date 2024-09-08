@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Survey Complete{% endblock%}
+
+{% block content%}
+<body background="{{ url_for('static', filename='confirmation_bg.png') }}">
+
+
+<div class="container" style="background-color: #6f5acd; width: 350px; padding: 1.25vw 1.25vw 2vw 1.75vw; margin-top: 15vw; margin-left: 9vw; border: solid #6f5acd 3px;">
+    <h1 style="color: #de8ed8; font-family: 'Raleway', sans-serif; font-weight: 600;">Thank You,</h1>
+    <p style="color: white; font-family: 'Barlow', sans-serif;"> For taking the survey and demonstrating interest in helping Jamaican Youth. Your survey responses
+        have been recorded and your matches will be sent to you via email within 24 hours. See you then!
+    </p>
+    <button style="margin-right: 10px; width:200px; height: 35px; border-radius: 2px; background-color: #de8ed8;"><a href="/shelters" style="text-decoration: none; color: white;">Continue Broswing</a></button>
+</div>
+{% endblock %}

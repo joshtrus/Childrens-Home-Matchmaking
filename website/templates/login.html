@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<body background="{{url_for('static', filename='sign_up_login_bg.png')}}">
+    <main>
+        <div class="main-container">
+            <div class="form-outer-container">
+                <div class="form-inner-container">
+                    <form method="POST">
+                        <div class="form-holder">
+                            <div class="title-holder holder">
+                                <h3 align="center">Log In</h3>
+                            </div>
+                            <div class="email-holder holder">
+                                <label for="email">Email Address</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="Enter email address"
+                                />
+                            </div>
+                            <div class="password-holder holder">
+                                <label for="password">Password</label>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    placeholder="Enter password"
+                                />
+                            </div>
+                            <div class="button-holder holder">
+                                <button type="submit" class="form-button">Log In</button>
+                            </div>
+                        </div>
+                        <p style="text-align: center;">New around here?<a href="/sign-up" style="color: #6f5acd; font-family: 'Barlow', sans-serif; font-weight: 700;"> Sign Up now</a></p>
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+{% endblock %}

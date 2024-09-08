@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock%}
+
+{% block content%}
+<body background="{{url_for('static', filename='sign_up_login_bg.png')}}">
+    <main>
+        <div class="main-container">
+            <div class="form-outer-container">
+                <div class="form-inner-container">
+                    <form method="POST">
+                        <div class="form-holder">
+                            <div class="title-holder holder" style="padding:0px">
+                                <h3 align="center">Sign Up</h3>
+                            </div>
+                            <div class="role-holder holder">
+                                <label for="urole">Role</label>
+                                <input 
+                                    type="text" 
+                                    id="urole" 
+                                    name="urole" 
+                                    placeholder="Donater or CHome"
+                                />
+                            </div>
+                            <div class="name-holder holder">
+                                <label for="full_name">Name</label>
+                                <input 
+                                    type="text" 
+                                    id="full_name" 
+                                    name="full_name" 
+                                    placeholder="Jane Doe or XYZ Childrens' Home"
+                                    style="width:220px"
+                                />
+                            </div>
+                            <div class="email-holder holder">
+                                <label for="email">Email Address</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="Enter email"
+                            />
+                            </div>
+                            <div class="password-holder holder">
+                                <label for="password1">Password</label>
+                                <input 
+                                    type="password" 
+                                    id="password1" 
+                                    name="password1" 
+                                    placeholder="Enter password"
+                                />
+                            </div>
+                            <div class="password-holder holder">
+                                <label for="password2">Confirm Password</label>
+                                <input 
+                                    type="password" 
+                                    id="password2" 
+                                    name="password2" 
+                                    placeholder="Confirm password"
+                                />
+                            </div>
+                            <div class="button-holder holder">
+                                <button type="submit" class="form-button">Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body> 
+{% endblock%}
